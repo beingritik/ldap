@@ -1,0 +1,22 @@
+<h2>Fethched members are:</h2>
+<table>
+    <tr>
+        <th>Members</th>
+        <th>Action</th>
+    </tr>
+    <% for(var i=0; i<users.length; i++) {%>
+        <tr>
+            <td>
+                <%=users[i].slice(3,-30)%>
+            </td>
+            <td>
+                <form action='/memberInfo' method="post">
+                    <button type="submit" class="Secondary" name="memberName" value="<%= users[i].substring(
+                        users[i].indexOf('=')+1, 
+                        users[i].lastIndexOf(',C')
+                        ) %>">
+                </form> View
+            </td>
+        </tr>
+        <%}%>
+</table>

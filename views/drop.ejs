@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="/css/bootstrap.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Team members here</title>
+</head>
+
+<body>
+
+    <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Team Members
+        </button>
+        <ul class="dropdown-menu">
+            <%for(i=0;i<users.length; i++){ %>
+
+                <li>
+                    <form action="/team/memberinfo" method="post">
+                        <button type="submit" class="Secondary" name="memberName" value="<%= users[i].substring(
+                        users[i].indexOf('=')+1, 
+                        users[i].lastIndexOf(',C')
+                        ) %>">
+                            <%=users[i].slice(3,-30)%>
+                    </form>
+                </li>
+                <% } %>
+        </ul>
+    </div>
+</body>
+
+</html>

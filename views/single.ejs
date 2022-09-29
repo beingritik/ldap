@@ -1,0 +1,79 @@
+
+    <h1>info page here</h1>
+
+        <table style="width:100%">
+            <tr>
+                <th>Attributes</th>
+                <th>Details</th>
+            </tr>
+
+            <tr>
+                <th>Display Name</th>
+                <% if(userinfo.cn){ %>
+                    <td>
+                        <%= userinfo.cn %>
+                    </td>
+                    <% }else {%>
+                    <td>Null</td>
+                    <% } %>
+            </tr>
+
+
+            <tr>
+                <th>Telephone Number</th>
+                <% if(userinfo.telephoneNumber){ %>
+                    <td>
+                        <%= userinfo.telephoneNumber %>
+                    </td>
+                    <% }else {%>
+                    <td>Null</td>
+                    <% } %>
+            </tr>
+
+
+            <tr>
+                <th>Login user Name</th>
+                <% if(userinfo.sAMAccountName){ %>
+                    <td>
+                        <%= userinfo.sAMAccountName %>
+                    </td>
+                    <% }else {%>
+                    <td>Null</td>
+                    <% } %>
+            </tr>
+
+            <tr>
+                <th>AD user Principal Name</th>
+                <% if(userinfo.userPrincipalName){ %>
+                    <td>
+                        <%= userinfo.userPrincipalName %>
+                    </td>
+                    <% }else {%>
+                    <td>Null</td>
+                    <% } %>
+            </tr>
+
+            <tr>
+                <th>Mail</th>
+                <% if(userinfo.mail){ %>
+                    <td>
+                        <%= userinfo.mail %>
+                    </td>
+                    <% }else {%>
+                    <td>Null</td>
+                    <% } %>
+            </tr>
+
+
+            <tr>
+                <th>Last Login</th>
+                <% if(userLogon){ %>
+                    <td>
+                        <%= userLogon %>
+                    </td>
+                    <% }else {%>
+                    <td>not found</td>
+                    <% } %>
+            </tr>
+
+        </table>

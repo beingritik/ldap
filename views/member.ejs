@@ -1,0 +1,78 @@
+<h1>Your Members info page here</h1>
+
+
+<table style="width:100%">
+    <tr>
+        <th>Attributes</th>
+        <th>Details</th>
+    </tr>
+
+    <tr>
+        <th>Display Name</th>
+        <% if(memberinfo.cn){ %>
+            <td>
+                <%= memberinfo.cn %>
+            </td>
+            <% }else {%>
+                <td>Null</td>
+                <% } %>
+    </tr>
+
+
+    <tr>
+        <th>Telephone Number</th>
+        <% if(memberinfo.telephoneNumber){ %>
+            <td>
+                <%= memberinfo.telephoneNumber %>
+            </td>
+            <% }else {%>
+                <td>Null</td>
+                <% } %>
+    </tr>
+
+    <tr>
+        <th>Login user Name</th>
+        <% if(memberinfo.sAMAccountName){ %>
+            <td>
+                <%= memberinfo.sAMAccountName %>
+            </td>
+            <% }else {%>
+                <td>Null</td>
+                <% } %>
+    </tr>
+
+    <tr>
+        <th>AD user Principal Name</th>
+        <% if(memberinfo.userPrincipalName){ %>
+            <td>
+                <%= memberinfo.userPrincipalName %>
+            </td>
+            <% }else {%>
+                <td>Null</td>
+                <% } %>
+    </tr>
+
+    <tr>
+        <th>Mail</th>
+        <% if(memberinfo.mail){ %>
+            <td>
+                <%= memberinfo.mail %>
+            </td>
+            <% }else {%>
+                <td>Null</td>
+                <% } %>
+    </tr>
+
+
+    <tr>
+        <th>Last Login</th>
+        <% if(memberLogon){ %>
+            <td>
+                <%= memberLogon %>
+            </td>
+            <% }else {%>
+                <td>not found</td>
+                <% } %>
+    </tr>
+
+</table>
